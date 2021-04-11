@@ -49,7 +49,9 @@ The input file should contain a map of account numbers to coin balances, and a l
 ///
 
 {
+   
    "balances": {
+   
          "NXT-NZKH-MZRE-2CTT-98NPZ": 30000000000000000,
          
          "NXT-X5JH-TJKJ-DVGC-5T2V8": 30000000000000000,
