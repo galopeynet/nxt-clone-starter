@@ -45,7 +45,7 @@ should be placed in the conf/data directory of the clone blockchain.
 Input file format
 
 The input file should contain a map of account numbers to coin balances, and a list of account public keys. Account numbers can be specified in either numeric or RS format. Supplying the public key for each account is optional, but recommended. Forging requires a public key, so the accounts that are going to forge the first blocks of the blockchain must have their public keys in the file. Here is an example input file, which allocates 300M each to the accounts with passwords "0", "1" and "2", for a total of 900M to new accounts, resulting in 100M automatically allocated to existing NXT holders:
-
+///
 {
     "balances": {
          "NXT-NZKH-MZRE-2CTT-98NPZ": 30000000000000000,
@@ -58,6 +58,7 @@ The input file should contain a map of account numbers to coin balances, and a l
          "011889a0988ccbed7f488878c62c020587de23ebbbae9ba56dd67fd9f432f808"
      ]
  }
+ ///
 The generated genesisAccounts.json file should be placed in the conf/data directory for the new blockchain package, replacing the existing empty file. Changes in genesisAccounts.json are applied only when blockchain is started from scratch, i.e. previous database is missing.
 
 There are multiple other customizations that should be made for the newly created Nxt clone, such as changing the default peer ports in nxt/peer/Peer.java, defining default peers in nxt-default.properties, changing the coin name and software name in nxt/Nxt.java, customizing the UI, etc. Such customization work should be done by a competent developer, and is beyond the scope of this document.
